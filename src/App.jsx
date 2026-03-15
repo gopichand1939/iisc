@@ -6,6 +6,8 @@ function parseDateParam(dateValue) {
   return new Date(year, month - 1, day);
 }
 
+
+// Normalizes a date to midnight to ensure consistent day comparisons
 function normalizeDate(dateValue) {
   const next = new Date(dateValue);
   next.setHours(0, 0, 0, 0);
